@@ -22,4 +22,3 @@ class Books(models.Model):
     class Meta:
         verbose_name = "Книга"
         verbose_name_plural = "Книги"
-
