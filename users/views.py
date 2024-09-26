@@ -11,13 +11,13 @@ from users.serailizer import UserSerializer
 class UserCreateApiView(CreateAPIView):
     queryset = User.objects.all()
     serializer_class = UserSerializer
-    permission_classes = [~IsLibrarian]
+    permission_classes = [IsLibrarian]
 
 
 class UserListApiView(ListAPIView):
     queryset = User.objects.all()
     serializer_class = UserSerializer
-    permission_classes = [~IsLibrarian]
+    permission_classes = [IsLibrarian]
 
 
 class UserRetrieveApiView(RetrieveAPIView):
@@ -28,10 +28,10 @@ class UserRetrieveApiView(RetrieveAPIView):
 class UserUpdateApiView(UpdateAPIView):
     queryset = User.objects.all()
     serializer_class = UserSerializer
-    permission_classes = [~IsLibrarian]
+    permission_classes = [IsLibrarian]
 
 
 class UserDestroyApiView(DestroyAPIView):
     queryset = User.objects.all()
     serializer_class = UserSerializer
-    permission_classes = [~IsLibrarian]
+    permission_classes = [IsLibrarian]
