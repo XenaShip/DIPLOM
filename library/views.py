@@ -17,7 +17,7 @@ from django_filters.rest_framework import DjangoFilterBackend
 class BooksCreateApiView(CreateAPIView):
     queryset = Books.objects.all()
     serializer_class = BooksSerializer
-    permission_classes = [~IsLibrarian]
+    permission_classes = [IsLibrarian]
 
 
 class BooksListApiView(ListAPIView):
@@ -36,13 +36,13 @@ class BooksRetrieveApiView(RetrieveAPIView):
 class BooksUpdateApiView(UpdateAPIView):
     queryset = Books.objects.all()
     serializer_class = BooksSerializer
-    permission_classes = [~IsLibrarian]
+    permission_classes = [IsLibrarian]
 
 
 class BooksDestroyApiView(DestroyAPIView):
     queryset = Books.objects.all()
     serializer_class = BooksSerializer
-    permission_classes = [~IsLibrarian]
+    permission_classes = [IsLibrarian]
 
 
 """Контроллеры для Авторов"""
@@ -51,7 +51,7 @@ class BooksDestroyApiView(DestroyAPIView):
 class AuthorCreateApiView(CreateAPIView):
     queryset = Author.objects.all()
     serializer_class = AuthorSerializer
-    permission_classes = [~IsLibrarian,]
+    permission_classes = [IsLibrarian,]
 
 
 class AuthorListApiView(ListAPIView):
@@ -70,11 +70,11 @@ class AuthorRetrieveApiView(RetrieveAPIView):
 class AuthorUpdateApiView(UpdateAPIView):
     queryset = Author.objects.all()
     serializer_class = AuthorSerializer
-    permission_classes = [~IsLibrarian]
+    permission_classes = [IsLibrarian]
 
 
 class AuthorDestroyApiView(DestroyAPIView):
     queryset = Author.objects.all()
     serializer_class = AuthorSerializer
-    permission_classes = [~IsLibrarian]
+    permission_classes = [IsLibrarian]
 
