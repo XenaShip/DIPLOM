@@ -16,8 +16,8 @@ class SomeTestCase(APITestCase):
     def setUp(self):
         # self.user = User.objects.get(email='admin@sky.pro')
         self.user = User.objects.create(email='test@yandex.ru', password='12345')
-        self.special_group = Group.objects.create(name='Librarian')
-        self.user.groups.add(self.special_group)
+        group = Group.objects.get(name='Librarian')
+        self.user.groups.add(group)
         # self.user.user_permissions.set(['library.add_author',
         #                             'library.change_author',
         #                             'library.delete_author',
